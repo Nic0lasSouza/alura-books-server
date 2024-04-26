@@ -31,7 +31,7 @@ function getLivro(req, res){
 function postLivro(req,res) {
     try{
         const livroNovo = req.body
-        if(req.body.nome){
+        if(req.body.nome){//verificacao para ver se o  nome existe no corpo da requisição
             insereLivro(livroNovo);
             res.status(201)
             res.send("Livro inserido com sucesso")
