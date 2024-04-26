@@ -1,20 +1,18 @@
 const { Router } = require ("express");
-const {getLivros, getLivro, postLivro} = require("../controladores/livro")
+const {getLivros, getLivro, postLivro, patchLivro, deleteLivro} = require("../controladores/livro");
+
 const router = Router();
 
-router.get('/', getLivros);
+router.get('/', getLivros); // mostrar todos os livros
 
 router.get('/:id', getLivro); //mostrar somente um livro na busca
 
-router.post('/', postLivro)
-
-router.patch('/', (req, res) => {
-    res.send('Você fez um riquisição do tipo PATCH ')
-})
+router.post('/', postLivro); //adicona livro novo
 
 
-router.delete('/', (req, res) => {
-    res.send('Você fez um riquisição do tipo DELETE ')
-})
+router.patch('/:id', patchLivro) //modificar  dados de um livro específico
+
+
+router.delete('/:id', deleteLivro)
 
 module.exports = router
