@@ -13,6 +13,6 @@ router.post('/', postLivro); //adicona livro novo
 router.patch('/:id', patchLivro) //modificar  dados de um livro específico
 
 
-router.delete('/:id', deleteLivro)
+router.delete('/:id', deleteLivro)// deletar um dado de um livro escolhido
 
 module.exports = router

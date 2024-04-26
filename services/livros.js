@@ -23,14 +23,19 @@ function modificaLivro(modificacoes, id){
     const indiceModificado = livrosAtuais.findIndex(livro => livro.id === id); //encontrar o indice pelos valores
     const  conteudoMudado = {... livrosAtuais[indiceModificado],  ...modificacoes}; //livrosAtuais [indiceModificado] -> {id: "2", nome:"livro irado"}
     //modificacoes -> {nome: "nome mucho legal"}
-    livrosAtuais[indiceModificado]=conteudoMudado
+    livrosAtuais[indiceModificado]=conteudoMudado;
 
     fs.writeFileSync("livros.json", JSON.stringify(livrosAtuais));//transformar o objeto em texto
 }
 
+function deletarLivroPorId(id){
+    const livrosFiltrados = livros.filter(livro=> livro.id !== id);
+    fs.writeFileSync("livros.json", JSON.stringify(livrosFiltrados))
+}
 module.exports = {
     getTodosLivros,
     getLivrosPorId,
     insereLivro,
-    modificaLivro
+    modificaLivro,
+    deletarLivroPorId
 };
