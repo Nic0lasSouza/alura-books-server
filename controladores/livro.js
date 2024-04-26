@@ -1,5 +1,4 @@
 const { getTodosLivros, getLivrosPorId, insereLivro, modificaLivro, deletarLivroPorId } = require("../services/livros");
-
 function getLivros(req, res){
     try {
         const livros = getTodosLivros() ;
@@ -44,10 +43,14 @@ function postLivro(req,res) {
 function patchLivro(req, res) {
     try{
         const id = req.params.id;
-        const body = req.body;
-
-        modificaLivro(body, id)
-        res.send("Item modificado com sucesso")
+        if(id && Number(id)){
+            const body = req.body;
+            modificaLivro(body, id)
+            res.send("Item modificado com sucesso")
+        } else{
+            res.status(422); //dado não esperado
+            res.send("Id invalido")
+        }
 
     } catch(error){
         res.status(500);
@@ -58,8 +61,13 @@ function patchLivro(req, res) {
 function deleteLivro(req, res) {
     try{
         const id = req.params.id;
-        deletarLivroPorId(id)
-        res.send("Item deletado com sucesso")
+        if(id && Number(id)){
+            deletarLivroPorId(id)
+            res.send("Item deletado com sucesso")
+        } else{
+            res.status(422); //dado não esperado
+            res.send("Id invalido")
+        }
 
     } catch(error){
         res.status(500);
