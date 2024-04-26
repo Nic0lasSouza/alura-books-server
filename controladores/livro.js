@@ -1,4 +1,4 @@
-const { getTodosLivros, getLivrosPorId } = require("../services/livros");
+const { getTodosLivros, getLivrosPorId, insereLivro } = require("../services/livros");
 
 function getLivros(req, res){
     try {
