@@ -18,6 +18,9 @@ function getLivro(req, res){
             //Number("batata")-> NaN-> false
             const livro = getLivrosPorId(id);
             res.send(livro);
+        } else{
+            res.status(422); //dado não esperado
+            res.send("Id invalido")
         }
 
     } catch(error){
