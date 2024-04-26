@@ -13,8 +13,13 @@ function getLivros(req, res){
 function getLivro(req, res){
     try {
         const id = req.params.id
-        const livro = getLivrosPorId(id);
-        res.send(livro);
+        if(id && Number(id)){
+            //Number(2)-> 2 -> true
+            //Number("batata")-> NaN-> false
+            const livro = getLivrosPorId(id);
+            res.send(livro);
+        }
+
     } catch(error){
         res.status(500);
         res.send(error.message);
