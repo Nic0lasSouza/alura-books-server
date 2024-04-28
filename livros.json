@@ -1,22 +1,82 @@
 [
     {
-        "id": "1",
-        "nome": "Livro irado"
+        "id": 1,
+        "nome": "Código Limpo: Habilidades Práticas do Agile Software"
     },
     {
-        "id": "2",
-        "nome": "Livro mucho legal "
+        "id": 2,
+        "nome": "Padrões de Projeto: Soluções Reutilizáveis de Software Orientado a Objetos"
     },
     {
-        "id": "3",
-        "nome": "Livro mais que demais"
+        "id": 3,
+        "nome": "Introdução aos Algoritmos"
     },
     {
-        "id": "4",
-        "nome": "Livro irado menos irado que o outro"
+        "id": 4,
+        "nome": "Código Completo: Um Manual Prático de Construção de Software"
     },
     {
-        "id": "5",
-        "nome": "Livro especial super demais"
+        "id": 5,
+        "nome": "O Programador Pragmático: Seu Caminho para a Maestria"
+    },
+    {
+        "id": 6,
+        "nome": "Refatoração: Aperfeiçoando o Design de Código Existente"
+    },
+    {
+        "id": 7,
+        "nome": "Desvendando os Segredos do Código: Programação e Lógica para Entrevistas de Emprego"
+    },
+    {
+        "id": 8,
+        "nome": "Head First Padrões de Projeto"
+    },
+    {
+        "id": 9,
+        "nome": "Arquitetura Limpa: Um Guia de Aprendizado para Estrutura e Design de Software"
+    },
+    {
+        "id": 10,
+        "nome": "Pérolas da Programação"
+    },
+    {
+        "id": 11,
+        "nome": "Estrutura e Interpretação de Programas de Computador"
+    },
+    {
+        "id": 12,
+        "nome": "Java Efetivo"
+    },
+    {
+        "id": 13,
+        "nome": "Projeto Orientado a Domínio: Atacando a Complexidade no Coração do Software"
+    },
+    {
+        "id": 14,
+        "nome": "Desenvolvimento Guiado por Testes: Aprenda com Exemplos"
+    },
+    {
+        "id": 15,
+        "nome": "Python: Escreva seus Primeiros Programas"
+    },
+    {
+        "id": 16,
+        "nome": "Aprendendo Padrões de Projeto em JavaScript"
+    },
+    {
+        "id": 17,
+        "nome": "JavaScript Eloquente: Uma Introdução Moderna à Programação"
+    },
+    {
+        "id": 18,
+        "nome": "Refatoração para Padrões"
+    },
+    {
+        "id": 19,
+        "nome": "Algoritmos Ilustrados: Um Guia Ilustrado para Programadores e Outras Pessoas Curiosas"
+    },
+    {
+        "id": 20,
+        "nome": "Princípios, Padrões e Práticas Ágeis em C#"
     }
 ]
