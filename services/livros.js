@@ -13,9 +13,9 @@ function getLivrosPorId(id){
 }
 
 function insereLivro(livroNovo){
-    const nolaListaDeLivros = [...livros, livroNovo] // lista com todos os livros... , mais o livro novo
+    const novaListaDeLivros = [...livros, livroNovo] // lista com todos os livros... , mais o livro novo
 
-    fs.writeFileSync("livros.json", JSON.stringify(nolaListaDeLivros)) // manipula o json e cria mais um livro no arquivo
+    fs.writeFileSync("livros.json", JSON.stringify(novaListaDeLivros)) // manipula o json e cria mais um livro no arquivo
 }
 
 function modificaLivro(modificacoes, id){
