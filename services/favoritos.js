@@ -1,22 +1,24 @@
 const fs = require("fs");
-const livrosFavoritos  = JSON.parse(fs.readFileSync( "favoritos.json"));//pegar todos os valores
-const Livros  = JSON.parse(fs.readFileSync( "livros.json"));
-
 function getTodosFavoritos(){
-    return livrosFavoritos;
+    return JSON.parse( fs.readFileSync("favoritos.json") );//pegar todos os valores;
 }
 
 function deletaFavoritoId(id){
-    const livrosFiltrados = livrosFavoritos.filter(livro => livro.id !== id); //tirar o item que tem o id que foi recebido
+    const livros = JSON.parse( fs.readFileSync("favoritos.json") );//pegar todos os valores
 
-    fs.writeFile('favoritos.json',JSON.stringify(livrosFiltrados)); //limpa o arquivo para escrever novamente
+    const livrosFiltrados = livros.filter( livro => livro.id !== id); //tirar o item que tem o id que foi recebido
+
+    fs.writeFileSync("favoritos.json", JSON.stringify(livrosFiltrados)); //limpa o arquivo para escrever novamente
 }
 
 function insereFavorito(id){
-    const livroInserido = Livros.find(livro => livro.id === id);
-    const novaListaDeLivrosFavoritos =[... livrosFavoritos, livroInserido];
+    const livros  = JSON.parse(fs.readFileSync( "livros.json"));
+    const livrosFavoritos  = JSON.parse(fs.readFileSync( "favoritos.json"));//pegar todos os valores
 
-    fs.writeFile('favoritos.json',JSON.stringify(novaListaDeLivrosFavoritos));
+    const livroInserido = livros.find(livro => livro.id === id);
+    const novaListaDeLivrosFavoritos =[...livrosFavoritos, livroInserido];
+
+    fs.writeFileSync("favoritos.json",JSON.stringify(novaListaDeLivrosFavoritos));
 }
 
 module.exports={
