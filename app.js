@@ -1,6 +1,7 @@
 const express = require("express");
 const rotaLivro = require("./rotas/livro");
 const rotaFavorito = require("./rotas/favorito")
+const rotaCategoria = require("./rotas/categoria")
 
 const cors = require("cors")
 
@@ -10,6 +11,7 @@ app.use(cors({ origin:"*" })); //Permite que todos os domínios acessem nossa AP
 
 app.use('/livros', rotaLivro);
 app.use('/favoritos', rotaFavorito)
+app.use('/categoria', rotaCategoria)
 
 const port = 8000;
 
