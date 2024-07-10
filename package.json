@@ -17,6 +17,7 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
+    "@vercel/node": "^3.2.2",
     "nodemon": "^3.1.0"
   }
 }
