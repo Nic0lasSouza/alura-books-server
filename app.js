@@ -13,9 +13,9 @@ app.use('/livros', rotaLivro);
 app.use('/favoritos', rotaFavorito)
 app.use('/categoria', rotaCategoria)
 
-const port = 8000;
+const PORT= 8000;
 
-app.listen(port, () => {
-    console.log(`Escutando a porta ${port}`)
+app.listen(PORT, () => {
+    console.log(`Escutando a porta ${PORT}`)
 })
 
