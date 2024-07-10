@@ -13,7 +13,7 @@ app.use('/livros', rotaLivro);
 app.use('/favoritos', rotaFavorito)
 app.use('/categoria', rotaCategoria)
 
-const PORT= 8000;
+const PORT= 9001;
 
 app.listen(PORT, () => {
     console.log(`Escutando a porta ${PORT}`)
