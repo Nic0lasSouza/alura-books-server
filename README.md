@@ -1,4 +1,7 @@
 # Alura Books Server
+![CORS](https://img.shields.io/badge/CORS-blue?logo=cors&logoColor=white)
+![Express](https://img.shields.io/badge/Express-green?logo=express&logoColor=white)
+![Nodemon](https://img.shields.io/badge/nodemon-blue?logo=nodemon&logoColor=white)
 
 Bem-vindo ao repositório do **Alura Books Server**. Este projeto é uma API backend desenvolvida para fornecer dados e funcionalidades para a aplicação Alura Books.
 
